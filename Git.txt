@@ -1,0 +1,48 @@
+-git init
+        
+            |Inicia un repositorio vacio en la ruta en la que está situada la consola
+
+-git add (nombre de archivo y extension o . para añadir todo lo que haya en la carpeta)
+
+            |Añade uno o varios archivos a la cola de espera para commit
+
+-git status
+
+            |Muestra la cola de espera para el commit y te avisa que archivos han sido modificados
+
+-git commit -m "mensaje que resuma la actualización"
+
+            |Sube archivos al repositorio
+
+-git commit -am "mensaje que resuma la actualización"
+
+            |Hace un commit sin necesidad de haber hecho previamente un "git add", sin embargo solo
+            |funciona si el archivo que quieres actualizar ha pasado al menos una vez por el "git add"
+
+-git show
+
+            |Muestra los cambios realizados en el último commit
+
+-git log 
+
+            |Muestra los commit que se han hecho
+            |    +git log --all  -------------------------> Muestra absolutamente todos los commit hechos
+            |    +git log --all --graph ------------------> Hace además la representación gráfica de las ramas
+            |    +git log --all --decorate --oneline -----> Representación de la historia del proyecto mas sencilla y condensada <---- alias arbol
+
+git checkout commitAnteriorORamaALaQueSeQuieraDesplazar
+
+            |Permite al usuario acceder a un commit anterior sin tener que realizar un reset.
+            |Permite al usuario moverse entre ramas (branch)
+
+
+-git reset codigoDelCommit --hard
+
+            |Fuerza al repositorio a volver al estado en el que estaba en el commit especificado
+
+
+
+
+-git remote add origin (link de repositorio)
+
+            |Sirve para enlazar el repositorio local con el de Github
