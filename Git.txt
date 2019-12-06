@@ -1,31 +1,31 @@
 -git init
         
-            |Inicia un repositorio vacio en la ruta en la que está situada la consola
+            |    Inicia un repositorio vacio en la ruta en la que está situada la consola
 
 -git add (nombre de archivo y extension o . para añadir todo lo que haya en la carpeta)
 
-            |Añade uno o varios archivos a la cola de espera para commit
+            |    Añade uno o varios archivos a la cola de espera para commit
 
 -git status
 
-            |Muestra la cola de espera para el commit y te avisa que archivos han sido modificados
+            |    Muestra la cola de espera para el commit y te avisa que archivos han sido modificados
 
 -git commit -m "mensaje que resuma la actualización"
 
-            |Sube archivos al repositorio
+            |    Sube archivos al repositorio
 
 -git commit -am "mensaje que resuma la actualización"
 
-            |Hace un commit sin necesidad de haber hecho previamente un "git add", sin embargo solo
-            |funciona si el archivo que quieres actualizar ha pasado al menos una vez por el "git add"
+            |    Hace un commit sin necesidad de haber hecho previamente un "git add", sin embargo solo
+            |    funciona si el archivo que quieres actualizar ha pasado al menos una vez por el "git add"
 
 -git show
 
-            |Muestra los cambios realizados en el último commit
+            |    Muestra los cambios realizados en el último commit
 
 -git log 
 
-            |Muestra los commit que se han hecho
+            |    Muestra los commit que se han hecho
             |
             |    +git log --stat -------------------------> Muestra los commit hechos con una representación gráfica de los 
             |                                               cambios.
@@ -39,30 +39,30 @@
 
 -git branch nombreDeLaNuevaRama
             
-            |Crea una rama paralela al proyecto principal
+            |    Crea una rama paralela al proyecto principal
             |    +git branch --list ----------------------> Lista las ramas creadas
             |    +git branch --d nombreDeLaRama ----------> Borra la rama especificada
 
 
 git checkout commitAnteriorORamaALaQueSeQuieraDesplazar
 
-            |Permite al usuario acceder a un commit anterior sin tener que realizar un reset.
-            |Permite al usuario moverse entre ramas (branch)
+            |    Permite al usuario acceder a un commit anterior sin tener que realizar un reset.
+            |    Permite al usuario moverse entre ramas (branch)
 
 -git reset codigoDelCommit --hard
 
-            |Fuerza al repositorio a volver al estado en el que estaba en el commit especificado
+            |    Fuerza al repositorio a volver al estado en el que estaba en el commit especificado
 
 -git remote add origin (link de repositorio)
 
-            |Sirve para enlazar el repositorio local con el de Github
+            |    Sirve para enlazar el repositorio local con el de Github
             |
-            |   +git remote -v --------------------------->Muestra los enlaces a los que está ligado el repositorio local
+            |    +git remote -v --------------------------->Muestra los enlaces a los que está ligado el repositorio local
 
 -git push
 
-            |Transmite los archivos en el repositorio local hacia el repositorio remoto
+            |    Transmite los archivos en el repositorio local hacia el repositorio remoto
 
 -git pull
 
-            |Transmite los archivos desde el repositorio remoto hacia el local
+            |    Transmite los archivos desde el repositorio remoto hacia el local

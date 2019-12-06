@@ -1,41 +1,41 @@
 -ctrl+l 
 
-            |Vaciar consola
+            |    Vaciar consola
 
 -alias nombre="comando"
 
-            |Crea un alias para ejecutar un comando
+            |    Crea un alias para ejecutar un comando
 
 -history
 
-            |Muestra un historial de los comandos ejecutados
+            |    Muestra un historial de los comandos ejecutados
 
 -pwd
 
-            |Muestra la ruta de la carpeta
+            |    Muestra la ruta de la carpeta
 
 -ls 
 
-            |Muestra los archivos de la carpeta
-                +ls -al ------->Muestra los archivos ocultos de la carpeta
+            |    Muestra los archivos de la carpeta
+            |    +ls -al ------->Muestra los archivos ocultos de la carpeta
 
 -cd nombreCarpeta
 
-            |Permite moverse dentro de una carpeta que este dentro de la que estamos usando
-                +cd .. -------->Se desplaza a la carpeta anterior de la ruta
+            |    Permite moverse dentro de una carpeta que este dentro de la que estamos usando
+            |    +cd .. -------->Se desplaza a la carpeta anterior de la ruta
 
 -mkdir nombreYExtensión
 
-            |Crea una carpeta con el nombre y extensión especificados
+            |    Crea una carpeta con el nombre y extensión especificados
 
 -rmdir nombreYExtensión
 
-            |Borra la carpeta con el nombre y extensión especificados
+            |    Borra la carpeta con el nombre y extensión especificados
 
 -touch nombreYExtensión
 
-            |Crea un archivo vacio con la extension que le especifiques
+            |    Crea un archivo vacio con la extension que le especifiques
 
 -rm nombreYExtensión    
 
-            |Elimina el archivo con el nombre y la extensión especificados
+            |    Elimina el archivo con el nombre y la extensión especificados
