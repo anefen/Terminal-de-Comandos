@@ -26,23 +26,43 @@
 -git log 
 
             |Muestra los commit que se han hecho
+            |
+            |    +git log --stat -------------------------> Muestra los commit hechos con una representación gráfica de los 
+            |                                               cambios.
+            |
             |    +git log --all  -------------------------> Muestra absolutamente todos los commit hechos
+            |
             |    +git log --all --graph ------------------> Hace además la representación gráfica de las ramas
-            |    +git log --all --decorate --oneline -----> Representación de la historia del proyecto mas sencilla y condensada <---- alias arbol
+            |
+            |    +git log --all --decorate --oneline -----> Representación de la historia del proyecto mas sencilla y condensada
+            |                                               \-Alias arbol\
+
+-git branch nombreDeLaNuevaRama
+            
+            |Crea una rama paralela al proyecto principal
+            |    +git branch --list ----------------------> Lista las ramas creadas
+            |    +git branch --d nombreDeLaRama ----------> Borra la rama especificada
+
 
 git checkout commitAnteriorORamaALaQueSeQuieraDesplazar
 
             |Permite al usuario acceder a un commit anterior sin tener que realizar un reset.
             |Permite al usuario moverse entre ramas (branch)
 
-
 -git reset codigoDelCommit --hard
 
             |Fuerza al repositorio a volver al estado en el que estaba en el commit especificado
 
-
-
-
 -git remote add origin (link de repositorio)
 
             |Sirve para enlazar el repositorio local con el de Github
+            |
+            |   +git remote -v --------------------------->Muestra los enlaces a los que está ligado el repositorio local
+
+-git push
+
+            |Transmite los archivos en el repositorio local hacia el repositorio remoto
+
+-git pull
+
+            |Transmite los archivos desde el repositorio remoto hacia el local
