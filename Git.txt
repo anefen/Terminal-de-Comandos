@@ -34,8 +34,8 @@
             |
             |    +git log --all --graph ------------------> Hace además la representación gráfica de las ramas
             |
-            |    +git log --all --decorate --oneline -----> Representación de la historia del proyecto mas sencilla y condensada
-            |                                               \-Alias arbol\
+            |    +git log --all --graph --decorate --oneline -----> Representación de la historia del proyecto mas sencilla y condensada
+            |                                                       \-Alias arbol\
 
 -git branch nombreDeLaNuevaRama
             
