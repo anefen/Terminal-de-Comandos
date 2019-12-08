@@ -94,5 +94,5 @@ git checkout commitAnteriorORamaALaQueSeQuieraDesplazar
 
 -git push origin nombreDeLaRama
 
-            |   Tras hacer un checkout a la rama que queramos transmitir al servidor remoto se usa esta commitAnteriorORamaALaQueSeQuieraDesplazar
+            |   Tras hacer un checkout a la rama que queramos transmitir al servidor remoto se usa esta 
 
