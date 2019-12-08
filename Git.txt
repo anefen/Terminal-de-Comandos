@@ -66,3 +66,33 @@ git checkout commitAnteriorORamaALaQueSeQuieraDesplazar
 -git pull
 
             |    Transmite los archivos desde el repositorio remoto hacia el local
+
+-git tag -a v0.1 -m "mensaje" 25c680f
+
+            |   Se crea un tag de la versión especificada con el nombre de versión y el mensaje indicados
+            |
+            |   +git tag -d nombre -----> Borra el tag del repositorio local
+            |   +git push origin :refs/tags/nombre ----->Borra el tag del repositorio remoto
+
+-git show-ref --tags
+
+            |   Muestra una lista de los tags creados y la versión a la que referencian
+
+-git push origin --tags
+
+            |   Transmite los tags creados en un servidor local a uno remoto
+
+-git show-branch
+
+            |   Muestra la historia de las ramas
+            |
+            |   +git show-branch --all -----------> Muestra toda la historia de las ramas
+
+-gitk
+
+            |   Muestra de manera muy visual la historia de tu proyecto y sus ramas
+
+-git push origin nombreDeLaRama
+
+            |   Tras hacer un checkout a la rama que queramos transmitir al servidor remoto se usa esta commitAnteriorORamaALaQueSeQuieraDesplazar
+
