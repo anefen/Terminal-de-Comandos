@@ -96,3 +96,12 @@ git checkout commitAnteriorORamaALaQueSeQuieraDesplazar
 
             |   Tras hacer un checkout a la rama que queramos transmitir al servidor remoto se usa esta 
 
+-git config -l
+
+            |   Muestra las configuraciones del usuario dentro de la consola (correo, nombre, ...)
+
+git clone linkDelRepositorioRemoto
+
+            |   Clona un repositorio remoto en una carpeta sin necesidad de hacer git init
+
+
