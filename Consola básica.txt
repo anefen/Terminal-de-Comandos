@@ -1,4 +1,4 @@
--ctrl+l 
+﻿-ctrl+l 
 
             |    Vaciar consola
 
@@ -39,3 +39,15 @@
 -rm nombreYExtensión    
 
             |    Elimina el archivo con el nombre y la extensión especificados
+
+-sudo -i
+	    |	 Entra en modo root
+
+-exit
+	    |	 Sale del modo root
+
+-ctrl c
+
+	    |	 Sale del proceso
+
+
