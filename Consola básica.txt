@@ -41,13 +41,30 @@
             |    Elimina el archivo con el nombre y la extensión especificados
 
 -sudo -i
-	    |	 Entra en modo root
+	        |	 Entra en modo root
 
 -exit
-	    |	 Sale del modo root
+	        |	 Sale del modo root
 
 -ctrl c
 
-	    |	 Sale del proceso
+	        |	 Sale del proceso
 
 
+-------------------------------------------------------------------------------
+
+Usuario, Grupo Propietario y Asignación de Permisos
+
+    -|rwx|rw-|r--|1|ssv|ssv|85  |ene 24 13:09|documento.txt
+    d|rwx|r-x|r-x|2|ssv|ssv|4096|ene 11 32:00|Descargas
+    |  |   |   |  |  |   |    |       |           |
+    |  |   |   |  |  |   |    |       |           |---Nombre y extensión del fichero o directorio
+    |  |   |   |  |  |   |    |       |---Fecha última modificación
+    |  |   |   |  |  |   |    |---Tamaño en bytes
+    |  |   |   |  |  |   |---Grupo Propietario
+    |  |   |   |  |  |---Usuario Propietario
+    |  |   |   |  |---En directorios: los subdirectorios que contiene
+    |  |   |   |---Permisos del resto
+    |  |   |---Permisos del grupo
+    |  |---Permisos del Propietario
+    |---Tipo de fichero
