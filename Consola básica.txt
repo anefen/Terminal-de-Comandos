@@ -51,9 +51,9 @@
 	        |	 Sale del proceso
 
 
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
-Usuario, Grupo Propietario y Asignación de Permisos
+Usuario, Grupo Propietario
 
     -|rwx|rw-|r--|1|ssv|ssv|85  |ene 24 13:09|documento.txt
     d|rwx|r-x|r-x|2|ssv|ssv|4096|ene 11 32:00|Descargas
@@ -68,3 +68,34 @@ Usuario, Grupo Propietario y Asignación de Permisos
     |  |   |---Permisos del grupo
     |  |---Permisos del Propietario
     |---Tipo de fichero
+
+Asignación de Permisos
+
+    -r = permiso de lectura (Read)
+    -w = permiso de escritura (Write)
+    -x = permiso de ejecución (eXecution)
+
+    Hay dos métodos para modificar los permisos sobre un archivo:
+        
+        Método UGO
+        Mediante las iniciales del destinatario del permiso (usuario=u, grupo=g, resto=0), seguido
+        de un "+" o un "-" que representan si se añade o se quita el permiso, y la inicial de este
+        último.
+            Ej.- chmod u+w documento.txt    Da permiso de escritura al usuario propietario de documento.txt
+                 chmod g-x programa.exe     Quita permisos de ejecución al grupo propietario de programa.exe
+
+        Método octal
+        Mediante un número octal compuesto de tres cifras correspondientes a la siguiente tabla:
+
+            Octal         Permisos
+              0      |      ---
+              1      |      --x
+              2      |      -w-
+              3      |      -wx
+              4      |      r--
+              5      |      r-x
+              6      |      rw-
+              7      |      rwx
+
+            Ej.- chmod 700 documento.txt    Da todos los permisos sobre documento.txt al usuario y se los quita al resto
+                 chmod 644 programa.exe     Da al usuario permisos de lectura y escritura y al resto solo de lectura
