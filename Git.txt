@@ -123,3 +123,12 @@ Colaboración con repositorios
             |   git remote add upstream linkDelRepositorioRemotoOriginal
             |   git pull upstream master
 
+git stash
+
+            |   Permite guardar en un limbo temporal los cambios realizados en un repositorio sin tener que hacer
+            |   commit. Útil para moverse ágilmente entre ramas
+            |
+            |   +git stash pop---------------------------> Dentro de la rama en la que se hizo el stash original Sirve
+            |                   para volver a traerte los cambios guardados en el limbo
+            |
+            |   +git stash list--------------------------> Muestra la lista de todos los stash guardados actualmente
