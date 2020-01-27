@@ -140,3 +140,20 @@ git clean --dry-run
             |   
             |   +git clean -f----------------------------> Elimina los archivos que aparecieron el el dry-run
 
+git commit --amend
+
+            |   Tras previamente haberle hecho un add al archivo modificado, sirve para introducir cambios de ultima
+            |   hora al commit anterior
+
+git grep palabra
+
+            |   Busca la palabra especificada entre los archivos de tu repositorio y te muestra una lista con
+            |   su posición. Para buscar etiquetado o símbolos especiales entre comillas: "<p>"
+            |
+            |   +git grep -c palabra---------------------->Cuenta la cantidad de veces que se usa la palabra especificada
+
+git log -S "palabra"
+
+            |   Busca en el log la palabra especificada. Útil para buscar un commit en concreto.
+
+            
