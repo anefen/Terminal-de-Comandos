@@ -5,5 +5,5 @@
     </a>
 </p>   
   <br>
-  <p align="center"">Libreria de comandos y comportamientos de diferentes programas con la consola de comandos de Linux y Windows.
+ <p align="center"> <strong>Libreria de comandos y comportamientos de diferentes programas con la consola de comandos de Linux y Windows.</strong>
 </p>
