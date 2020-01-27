@@ -111,3 +111,15 @@ git clone linkDelRepositorioRemoto
 git merge nombreDeLaRama
 
             |   Fusiona la rama en la que estas actualmente con otra que especifiques
+
+Colaboración con repositorios
+
+            |   En github está la opción "fork" que permite copiar el repositorio en el que quieres
+            |   colaborar a tu propia sección de repositorio
+            |
+            |   Una vez hecho el repositorio local en el caso de que el repositorio original esté 
+            |   adelantado en commits al propio lo suyo es añadir una nueva dirección para hacer
+            |   pull y push, siendo lo convencional llamarla "upstream"
+            |   git remote add upstream linkDelRepositorioRemotoOriginal
+            |   git pull upstream master
+
