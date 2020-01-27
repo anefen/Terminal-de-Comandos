@@ -2,6 +2,10 @@
 
             |    Vaciar consola
 
+-start https://paginaWeb.com
+
+            |   Abrir una página web
+
 -alias nombre="comando"
 
             |    Crea un alias para ejecutar un comando

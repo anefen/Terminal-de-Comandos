@@ -132,3 +132,11 @@ git stash
             |                   para volver a traerte los cambios guardados en el limbo
             |
             |   +git stash list--------------------------> Muestra la lista de todos los stash guardados actualmente
+
+git clean --dry-run
+
+            |   Hace una prueba en seco de los archivos que se quieran borrar que sean resultado de errores o copias.
+            |   Una vez ejecutado muestra una lista de los archivos que propone para el borrado.
+            |   
+            |   +git clean -f----------------------------> Elimina los archivos que aparecieron el el dry-run
+
