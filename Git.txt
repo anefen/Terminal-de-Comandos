@@ -46,7 +46,8 @@ Esc + shift + zz
             |    Crea una rama paralela al proyecto principal
             |    +git branch --list ----------------------> Lista las ramas creadas
             |    +git branch --d nombreDeLaRama ----------> Borra la rama especificada
-
+            |    +git branch -a --------------------------> Lista las absolutez de las ramas
+            |    +git branch -r --------------------------> Lista las ramas remotas
 
 git checkout commitAnteriorORamaALaQueSeQuieraDesplazar
 
@@ -156,4 +157,15 @@ git log -S "palabra"
 
             |   Busca en el log la palabra especificada. Útil para buscar un commit en concreto.
 
-            
+git shortlog
+
+            |   Nos muestra los commits hechos por los miembros del equipo
+            |
+            |   +git shortlog -sn-------------------------->Devuelve el número de commits que ha hecho cada miembros
+            |   +git shortlog -sn -all --no-merges--------->Devuelve el número sin contar los merges
+            |
+
+git config --global alias.nombreAlias "comando para el alias sin git delante"
+
+            |   Crea un alias interno de Git
+
