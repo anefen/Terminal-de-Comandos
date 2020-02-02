@@ -1,0 +1,117 @@
+﻿-ctrl+l 
+
+            |    Vacia la consola
+
+-start https://paginaWeb.com
+
+            |   Abrir una página web
+
+-explorer ruta
+
+            |   Abre en el explorador la carpeta en la ruta especificadaS
+
+-alias nombre="comando"
+
+            |    Crea un alias para ejecutar un comando
+
+-history
+
+            |    Muestra un historial de los comandos ejecutados
+
+-pwd
+
+            |    Muestra la ruta de la carpeta
+
+-ls 
+
+            |    Muestra los archivos de la carpeta
+            |    +ls -al ------->Muestra los archivos ocultos de la carpeta
+
+-cd nombreCarpeta
+
+            |    Permite moverse dentro de una carpeta que este dentro de la que estamos usando
+            |    +cd .. -------->Se desplaza a la carpeta anterior de la ruta
+
+-mkdir nombreYExtensión
+
+            |    Crea una carpeta con el nombre y extensión especificados
+
+-rmdir nombreYExtensión
+
+            |    Borra la carpeta con el nombre y extensión especificados
+
+-touch nombreYExtensión
+
+            |    Crea un archivo vacio con la extension que le especifiques
+
+-rm nombreYExtensión    
+
+            |    Elimina el archivo con el nombre y la extensión especificados
+
+-sudo -i
+	        |	 Entra en modo root
+
+sudo apt-get update
+
+            |   Actualiza listas de software, no instala, simplemente comprueba si existen
+
+sudo apt-get upgrade
+
+            |   Actualiza el software recogido en las listas del sudo apt-get update
+
+-exit
+	        |	 Sale del modo root
+
+-ctrl c
+
+	        |	 Sale del proceso
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Usuario, Grupo Propietario
+
+    -|rwx|rw-|r--|1|ssv|ssv|85  |ene 24 13:09|documento.txt
+    d|rwx|r-x|r-x|2|ssv|ssv|4096|ene 11 32:00|Descargas
+    |  |   |   |  |  |   |    |       |           |
+    |  |   |   |  |  |   |    |       |           |---Nombre y extensión del fichero o directorio
+    |  |   |   |  |  |   |    |       |---Fecha última modificación
+    |  |   |   |  |  |   |    |---Tamaño en bytes
+    |  |   |   |  |  |   |---Grupo Propietario
+    |  |   |   |  |  |---Usuario Propietario
+    |  |   |   |  |---En directorios: los subdirectorios que contiene
+    |  |   |   |---Permisos del resto
+    |  |   |---Permisos del grupo
+    |  |---Permisos del Propietario
+    |---Tipo de fichero
+
+Asignación de Permisos
+
+    -r = permiso de lectura (Read)
+    -w = permiso de escritura (Write)
+    -x = permiso de ejecución (eXecution)
+
+    Hay dos métodos para modificar los permisos sobre un archivo:
+        
+        Método UGO
+        Mediante las iniciales del destinatario del permiso (usuario=u, grupo=g, resto=0), seguido
+        de un "+" o un "-" que representan si se añade o se quita el permiso, y la inicial de este
+        último.
+            Ej.- chmod u+w documento.txt    Da permiso de escritura al usuario propietario de documento.txt
+                 chmod g-x programa.exe     Quita permisos de ejecución al grupo propietario de programa.exe
+
+        Método octal
+        Mediante un número octal compuesto de tres cifras correspondientes a la siguiente tabla:
+
+            Octal         Permisos
+              0      |      ---
+              1      |      --x
+              2      |      -w-
+              3      |      -wx
+              4      |      r--
+              5      |      r-x
+              6      |      rw-
+              7      |      rwx
+
+            Ej.- chmod 700 documento.txt    Da todos los permisos sobre documento.txt al usuario y se los quita al resto
+                 chmod 644 programa.exe     Da al usuario permisos de lectura y escritura y al resto solo de lectura

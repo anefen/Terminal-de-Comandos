@@ -1,6 +1,6 @@
 ﻿-ctrl+l 
 
-            |    Vaciar consola
+            |    Vacia la consola
 
 -start https://paginaWeb.com
 
