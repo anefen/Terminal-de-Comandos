@@ -2,15 +2,15 @@
 
             |    Clear the console
 
--start https://paginaWeb.com
+-start https://webpage.com
 
             |   The default web explorer opens the specified webpage
 
--explorer ruta
+-explorer route
                 
             |   The explorer open the directory specified in the route
 
--alias nombre="comando"
+-alias name="command"
 
             |    Creates an alias to execute a command
 
@@ -30,91 +30,128 @@
             |       +ls -a -------> Shows a files and directories list with hidden files
             |       +ls -A -------> Shows a files and directories list with hidden files except "." and ".."
 
--cd nombreCarpeta
+-cd route
 
-            |    Permite moverse dentro de una carpeta que este dentro de la que estamos usando
-            |    +cd .. -------->Se desplaza a la carpeta anterior de la ruta
+            |   The console moves to the specified route
+            |
+            |       +cd .. -------> Moves to the previous directory in the route
 
--mkdir nombreYExtensión
+-mkdir name
 
-            |    Crea una carpeta con el nombre y extensión especificados
+            |   Creates a directory with the specified name
+            |   
+            |       +mkdir oldDir1/oldDir2/newDir -------> Creates a directory ("newDir") in that route
+            |       +mkdir -p dir1/dir2/newDir -------> Creates "newDir" inside "dir1/dir2". If those directories doesn't exist then it creates them
 
--rmdir nombreYExtensión
+-rmdir name
 
-            |    Borra la carpeta con el nombre y extensión especificados
+            |   Erase a directory with the specified name. If it's not empty the command woldn't work
+            |
+            |       +rmdir -p dir1/dir2/dir3 -------> Erases "dir3", then "dir2" and finally "dir1", but only if they are empty
+            |       +rm -fr dirToErase -------> Erase the directory "dirToErase" along with all of its contents
 
--touch nombreYExtensión
+-touch name.extension
 
-            |    Crea un archivo vacio con la extension que le especifiques
+            |   Creates a empty file with the name and extension specified. If files already exist then it update last modification date
 
--rm nombreYExtensión    
+-rm name.extension    
 
-            |    Elimina el archivo con el nombre y la extensión especificados
+            |   Erase the specified file. 
+            |   It can also be used to erase multiples files as rm name.extension name2.extension2 name3.extension4
+
+-cp name.extension directory
+
+            |   Copy the specified file into the specified directory
+            |
+            |       +cp -R dir1 dir2 -------> Copy "dir1" into "dir2". If "dir2" don't exist then it creates a copy of "dir1" named as "dir2"
+
+-mv first second
+
+            |   If "second" is a directory, then moves "first" into "second"
+            |   If "second" doesn't exist, then rename "first" as "second"
+            |   If "first" and "second" are both files then rewrite "second" as "first"
 
 -sudo -i
-	        |	 Entra en modo root
+	        |	Enter in root mode
 
 sudo apt-get update
 
-            |   Actualiza listas de software, no instala, simplemente comprueba si existen
+            |   Updates software lists
 
 sudo apt-get upgrade
 
-            |   Actualiza el software recogido en las listas del sudo apt-get update
+            |   Updates the software in the software update list
 
 -exit
-	        |	 Sale del modo root
+	        |	Exit from root mode
 
 -ctrl c
 
-	        |	 Sale del proceso
+	        |	Stop the process
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Jokers
 
-------------------------------------------------------------------------------------------------------------------------
+* = means 0 or more characters
+? = means one character
 
-Usuario, Grupo Propietario
+Examples:
+    - *.txt = means all files or directories who finish as ".txt"
+    - S* = means all files or directories who begins as "S"
+    - *k* = means all files or directories who contains a "k" in their names
+    - S*a = means all files or directories who begins as "S" and finish as "a"
+    - ??? = means all files or directories who have three characters
+    - S?? = means all files or directories who begins as "S" and have two more characters
+    - ???* = means all files or directories who have 3 or more characters 
 
-    -|rwx|rw-|r--|1|ssv|ssv|85  |ene 24 13:09|documento.txt
-    d|rwx|r-x|r-x|2|ssv|ssv|4096|ene 11 32:00|Descargas
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+User, Owner Group
+
+    -|rwx|rw-|r--|1|ssv|ssv|85  |jan 24 13:09|document.txt
+    d|rwx|r-x|r-x|2|ssv|ssv|4096|jan 11 32:00|downloads
     |  |   |   |  |  |   |    |       |           |
-    |  |   |   |  |  |   |    |       |           |---Nombre y extensión del fichero o directorio
-    |  |   |   |  |  |   |    |       |---Fecha última modificación
-    |  |   |   |  |  |   |    |---Tamaño en bytes
-    |  |   |   |  |  |   |---Grupo Propietario
-    |  |   |   |  |  |---Usuario Propietario
-    |  |   |   |  |---En directorios: los subdirectorios que contiene
-    |  |   |   |---Permisos del resto
-    |  |   |---Permisos del grupo
-    |  |---Permisos del Propietario
-    |---Tipo de fichero
+    |  |   |   |  |  |   |    |       |           |---Name and extension of the file or directory
+    |  |   |   |  |  |   |    |       |---Date of last modification
+    |  |   |   |  |  |   |    |---Size in bytes
+    |  |   |   |  |  |   |---Owner group
+    |  |   |   |  |  |---Owner User
+    |  |   |   |  |---In directories: the subdirectories that contain
+    |  |   |   |---Permits of the rest
+    |  |   |---Permits of the group
+    |  |---Permits of the owner
+    |---Type of file
 
-Asignación de Permisos
+Permission assignment
 
-    -r = permiso de lectura (Read)
-    -w = permiso de escritura (Write)
-    -x = permiso de ejecución (eXecution)
+    -r = read permission
+    -w = write permission
+    -x = execution permission
 
-    Hay dos métodos para modificar los permisos sobre un archivo:
+    There are two ways to modify the permission over a file:
         
-        Método UGO
-        Mediante las iniciales del destinatario del permiso (usuario=u, grupo=g, resto=0), seguido
-        de un "+" o un "-" que representan si se añade o se quita el permiso, y la inicial de este
-        último.
-            Ej.- chmod u+w documento.txt    Da permiso de escritura al usuario propietario de documento.txt
-                 chmod g-x programa.exe     Quita permisos de ejecución al grupo propietario de programa.exe
+        UGO Method:
 
-        Método octal
-        Mediante un número octal compuesto de tres cifras correspondientes a la siguiente tabla:
+        Using the first letter of the receiver of the permission (user=u, group=g, rest=0), with
+        an "+" or "-" depending if you want to give or remove the permission, and first letter of the kind
+        of permission.
 
-            Octal         Permisos
-              0      |      ---
-              1      |      --x
-              2      |      -w-
-              3      |      -wx
-              4      |      r--
-              5      |      r-x
-              6      |      rw-
-              7      |      rwx
+            Ex.- chmod u+w document.txt    Gives writing permission to the owner user of document.txt
+                 chmod g-x program.exe     Removes execution permission to the owner grupop of program.exe
 
-            Ej.- chmod 700 documento.txt    Da todos los permisos sobre documento.txt al usuario y se los quita al resto
-                 chmod 644 programa.exe     Da al usuario permisos de lectura y escritura y al resto solo de lectura
+        Octal Method:
+
+        Using an octal number composed of three characters who belongs to the next array:
+
+            Octal         permissions
+              0       |       ---
+              1       |       --x
+              2       |       -w-
+              3       |       -wx
+              4       |       r--
+              5       |       r-x
+              6       |       rw-
+              7       |       rwx
+
+            Ex.- chmod 700 document.txt    Gives all permissions over document.txt to the owner user and remove it from the rest
+                 chmod 644 program.exe     Gives reading and writing permission to the owner user and just reading to the rest
