@@ -30,47 +30,81 @@
             |       +ls -a -------> Muestra una lista de archivos y carpetas con los archivos ocultos
             |       +ls -A -------> Muestra una lista de archivos y carpetas con los archivos ocultos excepto "." y ".."
 
--cd nombreCarpeta
+-cd ruta
 
-            |    Permite moverse dentro de una carpeta que este dentro de la que estamos usando
-            |    +cd .. -------->Se desplaza a la carpeta anterior de la ruta
+            |   La consola se mueve a la ruta especificada
+            |
+            |       +cd .. -------> Se desplaza a la carpeta anterior de la ruta
 
--mkdir nombreYExtensión
+-mkdir nombre
 
-            |    Crea una carpeta con el nombre y extensión especificados
+            |   Crea una carpeta con el nombre especificado
+            |
+            |       +mkdir carpVieja1/carpVieja2/nuevaCarp -------> Crea una carpeta ("nuevaCarpeta") en esa ruta
+            |       +mkdir -p carp1/carp2/nuevaCarp -------> Crea "nuevaCarp" dentro de "carp1/carp2". Si esas carpetas no existen entonces las crea
 
--rmdir nombreYExtensión
+-rmdir nombre
 
-            |    Borra la carpeta con el nombre y extensión especificados
+            |   Elimina una carpeta con el nombre especificado. Si no esta vacía el comando no funcionará
+            |
+            |       +rmdir -p carp1/carp2/carp3 -------> Elimina "carp3", luego "carp2" y finalmente "carp3", pero solo si están vacías
+            |       +rm -fr carpAEliminar -------> Elimina la carpeta "carpAEliminar" con todo lo que contiene
 
--touch nombreYExtensión
+-touch nombre.extensión
 
-            |    Crea un archivo vacio con la extension que le especifiques
+            |   Crea un archivo vacio con la extension que le especifiques. Si el archivo ya existe entonces actualiza la fecha de la última modificación
 
--rm nombreYExtensión    
+-rm nombre.extensión    
 
-            |    Elimina el archivo con el nombre y la extensión especificados
+            |   Elimina el archivo con el nombre y la extensión especificados. 
+            |   Tambien se puede usar para borrar varios archivos a la vez como rm nombre2.extensión2 nombre2.extensión2
+
+-cp nombre.extensión
+
+            |   Copia el archivo especificado en la carpeta especificada
+            |
+            |       +cp -R carp1 carp2 -------> Copia "carp1" dentro de "carp2". Si "carp2" no existe entonces crea una copia de "carp1" llamada "carp2"
+
+mv primero segundo
+
+            |   Si "segundo" es una carpeta, entonces mueve "primero" dentro de "segundo"
+            |   Si "segundo" no existe, entonces renombra "primero" como "segundo"
+            |   Si ambos, "primero" y "segundo" son archivos, entonces reescribe "segundo" como "primero"
 
 -sudo -i
 	        |	 Entra en modo root
 
 sudo apt-get update
 
-            |   Actualiza listas de software, no instala, simplemente comprueba si existen
+            |   Actualiza listas de software
 
 sudo apt-get upgrade
 
-            |   Actualiza el software recogido en las listas del sudo apt-get update
+            |   Actualiza el software en la lista de actualización de software
 
 -exit
-	        |	 Sale del modo root
+	        |	Sale del modo root
 
 -ctrl c
 
-	        |	 Sale del proceso
+	        |	Para el proceso
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Comodines
 
-------------------------------------------------------------------------------------------------------------------------
+* = significa 0 o más carácteres
+? = significa un carácteres
+
+Ejemplos:
+    - *.txt = significa todos los archivos o directorios que finalicen como ".txt"
+    - S*  = significa todos los archivos o directorios que empiezan por "S"
+    - *k*  = significa todos los archivos o directorios que contienen una "k" en sus nombres
+    - S*a  = significa todos los archivos o directorios que empiezan por "S" y acaban por "a"
+    - ???  = significa todos los archivos o directorios que tienen tres carácteres
+    - S??  = significa todos los archivos o directorios que empiezan por "S" y tienen dos carácteres más
+    - ???*  = significa todos los archivos o directorios que tienen tres carácteres o más
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Usuario, Grupo Propietario
 
@@ -88,6 +122,8 @@ Usuario, Grupo Propietario
     |  |---Permisos del Propietario
     |---Tipo de fichero
 
+    
+
 Asignación de Permisos
 
     -r = permiso de lectura (Read)
@@ -96,14 +132,17 @@ Asignación de Permisos
 
     Hay dos métodos para modificar los permisos sobre un archivo:
         
-        Método UGO
+        Método UGO:
+
         Mediante las iniciales del destinatario del permiso (usuario=u, grupo=g, resto=0), seguido
-        de un "+" o un "-" que representan si se añade o se quita el permiso, y la inicial de este
-        último.
+        de un "+" o un "-" que representan si se añade o se quita el permiso, y la inicial del tipo
+        de permiso
+
             Ej.- chmod u+w documento.txt    Da permiso de escritura al usuario propietario de documento.txt
                  chmod g-x programa.exe     Quita permisos de ejecución al grupo propietario de programa.exe
 
         Método octal
+        
         Mediante un número octal compuesto de tres cifras correspondientes a la siguiente tabla:
 
             Octal         Permisos
