@@ -41,7 +41,8 @@
             |   Creates a directory with the specified name
             |   
             |       +mkdir oldDir1/oldDir2/newDir -------> Creates a directory ("newDir") in that route
-            |       +mkdir -p dir1/dir2/newDir -------> Creates "newDir" inside "dir1/dir2". If those directories doesn't exist then it creates them
+            |       +mkdir -p dir1/dir2/newDir -------> Creates "newDir" inside "dir1/dir2". If those directories doesn't exist
+            |                                           then it creates them
 
 -rmdir name
 
@@ -52,7 +53,8 @@
 
 -touch name.extension
 
-            |   Creates a empty file with the name and extension specified. If files already exist then it update last modification date
+            |   Creates a empty file with the name and extension specified. If files already exist then it update last 
+            |   modification date
 
 -rm name.extension    
 
@@ -63,7 +65,8 @@
 
             |   Copy the specified file into the specified directory
             |
-            |       +cp -R dir1 dir2 -------> Copy "dir1" into "dir2". If "dir2" don't exist then it creates a copy of "dir1" named as "dir2"
+            |       +cp -R dir1 dir2 -------> Copy "dir1" into "dir2". If "dir2" don't exist then it creates a copy of 
+            |                                 "dir1" named as "dir2"
 
 -mv first second
 
@@ -89,7 +92,7 @@ sudo apt-get upgrade
 
 	        |	Stop the process
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 Jokers
 
 * = means 0 or more characters
@@ -104,7 +107,7 @@ Examples:
     - S?? = means all files or directories who begins as "S" and have two more characters
     - ???* = means all files or directories who have 3 or more characters 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 User, Owner Group
 
