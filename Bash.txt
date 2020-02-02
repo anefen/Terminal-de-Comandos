@@ -6,6 +6,10 @@
 
             |   Abrir una página web
 
+-explorer ruta
+
+            |   Abre en el explorador la carpeta en la ruta especificadaS
+
 -alias nombre="comando"
 
             |    Crea un alias para ejecutar un comando
@@ -46,6 +50,14 @@
 
 -sudo -i
 	        |	 Entra en modo root
+
+sudo apt-get update
+
+            |   Actualiza listas de software, no instala, simplemente comprueba si existen
+
+sudo apt-get upgrade
+
+            |   Actualiza el software recogido en las listas del sudo apt-get update
 
 -exit
 	        |	 Sale del modo root
