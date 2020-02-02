@@ -1,31 +1,34 @@
 ﻿-ctrl+l 
 
-            |    Vacia la consola
+            |    Clear the console
 
 -start https://paginaWeb.com
 
-            |   Abrir una página web
+            |   The default web explorer opens the specified webpage
 
 -explorer ruta
-
-            |   Abre en el explorador la carpeta en la ruta especificadaS
+                
+            |   The explorer open the directory specified in the route
 
 -alias nombre="comando"
 
-            |    Crea un alias para ejecutar un comando
+            |    Creates an alias to execute a command
 
 -history
 
-            |    Muestra un historial de los comandos ejecutados
+            |    Shows a command record
 
 -pwd
 
-            |    Muestra la ruta de la carpeta
+            |    Shows the actual route of the console
 
 -ls 
 
-            |    Muestra los archivos de la carpeta
-            |    +ls -al ------->Muestra los archivos ocultos de la carpeta
+            |    Shows a files and directories list of the actual route
+            |
+            |       +ls -l -------> Shows a files and directories list in a detailed mode
+            |       +ls -a -------> Shows a files and directories list with hidden files
+            |       +ls -A -------> Shows a files and directories list with hidden files except "." and ".."
 
 -cd nombreCarpeta
 

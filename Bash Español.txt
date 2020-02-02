@@ -1,14 +1,14 @@
 ﻿-ctrl+l 
 
-            |    Vacia la consola
+            |    Limpia la consola
 
 -start https://paginaWeb.com
 
-            |   Abrir una página web
+            |   El navegador por defecto abre la pagina web especificada
 
 -explorer ruta
 
-            |   Abre en el explorador la carpeta en la ruta especificadaS
+            |   El explorador abre la carpeta especificada en la ruta
 
 -alias nombre="comando"
 
@@ -16,16 +16,19 @@
 
 -history
 
-            |    Muestra un historial de los comandos ejecutados
+            |    Muestra un historial de comandos
 
 -pwd
 
-            |    Muestra la ruta de la carpeta
+            |    Muestra la ruta actual de la consola
 
 -ls 
 
-            |    Muestra los archivos de la carpeta
-            |    +ls -al ------->Muestra los archivos ocultos de la carpeta
+            |    Muestra una lista de los ficheros y las carpetas de la ruta actual
+            |
+            |       +ls -l -------> Muestra una lista de archivos y carpetas en modo detallado
+            |       +ls -a -------> Muestra una lista de archivos y carpetas con los archivos ocultos
+            |       +ls -A -------> Muestra una lista de archivos y carpetas con los archivos ocultos excepto "." y ".."
 
 -cd nombreCarpeta
 
