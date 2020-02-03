@@ -13,6 +13,9 @@
 -alias name="command"
 
             |    Creates an alias to execute a command
+            |       +alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+            |        -------> It creates a readable tree of the directories, subdirectories and files who exist 
+            |                 inside the actual directory
 
 -history
 
@@ -78,6 +81,22 @@
             |   If "second" is a directory, then moves "first" into "second"
             |   If "second" doesn't exist, then rename "first" as "second"
             |   If "first" and "second" are both files then rewrite "second" as "first"
+
+-cat fileName
+
+            |   This command make an output in the console of the content of the file specified
+            |       +cat > fileName -------> It deploys a text editor inside the console that allows to instert what 
+            |                                introduced inside the specified file (if it don't exist then it creates it).
+            |                                To exit the text editor ctrl+c
+
+-tail fileName
+
+            |   It makes an output in console of the ten last lines in the specified file
+            |       +tail -14 fileName -------> The command will output the specified number of lines of the file
+
+-less fileName
+
+            |   It deploys an interface inside the console with an output of the specified file
 
 -sudo -i
 	        |	Enter in root mode

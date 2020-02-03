@@ -13,6 +13,9 @@
 -alias nombre="comando"
 
             |    Crea un alias para ejecutar un comando
+            |       +alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+            |        -------> Crea un árbol legible de las carpetas, subcarpetas y archivos que existen dentro de la
+            |                 carpeta acual
 
 -history
 
@@ -39,8 +42,7 @@
 -pushd ruta / popd
 
             |   El comando "pushd" mueve la consola a la ruta especificada como si fuera un "cd" normal, sin embargo, guarda en memoria
-            |   la ruta en la que se hizo el comando, de manera que ejecutando un "popd" retorna a la consola a especificada
-            |   punto
+            |   la ruta en la que se hizo el comando, de manera que ejecutando un "popd" retorna a la consola a especificado punto
 
 -mkdir nombre
 
@@ -79,6 +81,22 @@ mv primero segundo
             |   Si "segundo" es una carpeta, entonces mueve "primero" dentro de "segundo"
             |   Si "segundo" no existe, entonces renombra "primero" como "segundo"
             |   Si ambos, "primero" y "segundo" son archivos, entonces reescribe "segundo" como "primero"
+
+-cat nombreArchivo
+
+            |   Este comando hace un output del contenido del fichero especificado en la consola
+            |       +cat > nombreArchivo -------> Despliega un editor dentro de la consola que permite introducir texto al archivo
+            |                                     especificado (si no existe lo crea). Para salir del editor ctrl+c. SOBREESCRIBE.
+            |
+
+-tail nombreArchivo
+
+            |   Imprime en consola las diez últimas líneas de el archivo especificado
+            |       +tail -14 nombreArchivo -------> el comando imprimirá el número de líneas especificado del archivo
+
+-less nombreArchivo
+
+            |   Despliega una interfaz dentro de la consola que imprime el archivo especificado
 
 -sudo -i
 	        |	 Entra en modo root
