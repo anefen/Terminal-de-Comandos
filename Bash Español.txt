@@ -36,6 +36,12 @@
             |
             |       +cd .. -------> Se desplaza a la carpeta anterior de la ruta
 
+-pushd ruta / popd
+
+            |   El comando "pushd" mueve la consola a la ruta especificada como si fuera un "cd" normal, sin embargo, guarda en memoria
+            |   la ruta en la que se hizo el comando, de manera que ejecutando un "popd" retorna a la consola a especificada
+            |   punto
+
 -mkdir nombre
 
             |   Crea una carpeta con el nombre especificado

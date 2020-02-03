@@ -36,6 +36,11 @@
             |
             |       +cd .. -------> Moves to the previous directory in the route
 
+-pushd route / popd
+
+            |   The command "pushd" works as a normal "cd" with the exception that it keeps in memory the route of the place
+            |   it was executed, wich allow to move back just using the command "popd" 
+
 -mkdir name
 
             |   Creates a directory with the specified name
