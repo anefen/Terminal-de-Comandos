@@ -63,6 +63,7 @@ git checkout commitAnteriorORamaALaQueSeQuieraDesplazar
             |    Sirve para enlazar el repositorio local con el de Github
             |
             |    +git remote -v --------------------------->Muestra los enlaces a los que está ligado el repositorio local
+            |    +git remote set-url (link) --------------->Cambia la url del repositorio remoto aunque ya exista una previamente
 
 -git push
 

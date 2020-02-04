@@ -1,6 +1,10 @@
 ﻿-ctrl+l 
 
-            |    Clear the console
+            |   Clear the console
+
+-ctrl+r
+
+            |   It opens a process that allows to search a previously used command
 
 -start https://webpage.com
 
@@ -93,6 +97,7 @@
 
             |   It makes an output in console of the ten last lines in the specified file
             |       +tail -14 fileName -------> The command will output the specified number of lines of the file
+            |       +tail -f fileName -------> As long as the file have been updated and saved the tail will include it
 
 -less fileName
 

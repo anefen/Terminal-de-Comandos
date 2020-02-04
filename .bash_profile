@@ -31,7 +31,7 @@ echo "";
         # copia el contenido de este fichero a un repositorio para conservar la información en Github
         bashProfileToGit # Ejecución del comando para que actualice el archivo cada vez que se entre en consola
 
-    # Páginas en alias----------------------------------------------------------------------------------------------------------
+    # Páginas en alias------------------------------------------------------------------------------------------------------
 
         alias github="start https://github.com/serodriguez-code?tab=repositories"
             # Abre el navegador en la página de repositorios de GitHub
@@ -48,7 +48,6 @@ echo "";
         alias platzi="start https://platzi.com/clases/"
             # Abre el navegador en la página de Platzi
         
-
 # Functions-----------------------------------------------------------------------------------------------------------------
 
     function remind (){ 

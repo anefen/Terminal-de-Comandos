@@ -1,6 +1,10 @@
 ﻿-ctrl+l 
 
-            |    Limpia la consola
+            |   Limpia la consola
+
+-ctrl+r 
+
+            |   Abre un proceso que permite buscar un comando previamente realizado
 
 -start https://paginaWeb.com
 
@@ -93,6 +97,7 @@ mv primero segundo
 
             |   Imprime en consola las diez últimas líneas de el archivo especificado
             |       +tail -14 nombreArchivo -------> el comando imprimirá el número de líneas especificado del archivo
+            |       +tail -f nombreArchivo -------> mientras el archivo sea modificado y salvado el tail actualizará las líneas
 
 -less nombreArchivo
 
