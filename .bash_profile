@@ -53,12 +53,16 @@ echo "";
 
     function remindMe (){ 
         echo ""
-        echo "  -ccd/cdd:       Mueve la consola a la carpeta indicada y ejecuta un ls"
-        echo "  -arbol:         Crea un árbol de subdirectorios y archivos"
-        echo "  -escritorio:    Mueve la consola al escritorio"
-        echo "  -repositorios:  Mueve la consola a la carpeta de los repositorios"
-        echo "  -comandos:      Muestra un less de la lista de comandos de bash en español"
-        echo "  -gitBash:       Copia el contenido de este fichero a un repositorio para conservar la información en Github"
+        echo "  -ccd/cdd:           Mueve la consola a la carpeta indicada y ejecuta un ls"
+        echo "  -arbol:             Crea un árbol de subdirectorios y archivos"
+        echo "  -escritorio:        Mueve la consola al escritorio"
+        echo "  -repositorios:      Mueve la consola a la carpeta de los repositorios"
+        echo "  -comandos:          Muestra un less de la lista de comandos de bash en español"
+        echo "  -paginas:           Lista las paginas ligadas a un alias"
+        echo "  -gitBash:           Copia el contenido de este fichero a un repositorio para conservar la información en Github"
+        echo "  -commitTerminal:    Hace un commit automatizado del repositorio de Sintaxis-Consola de Github"
+        echo "  -commitPlatzi:      Hace un commit automatizado del repositorio de Platzi de Github"
+
     }                       # Imprime en la consola una lista de los alias creados con una pequeña explicación
 
     function paginas (){
@@ -80,4 +84,8 @@ echo "";
 
     function commitTerminal() {
         cd /c/Users/sergi/Repositorios/Terminal\ de\ Comandos && git add . && git commit -am "commit automático" && git push origin master
-    }                       # Funcionara?
+    }                       # Hace un commit automatizado del repositorio de Sintaxis-Consola de Github
+
+    function commitPlatzi() {
+        cd /c/Users/sergi/Repositorios/Platzi && git add . && git commit -am "commit automático" && git push origin master
+    }                       # Hace un commit automatizado del repositorio de Platzi de Github
