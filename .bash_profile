@@ -28,8 +28,8 @@ echo "";
         # Muestra un less de la lista de comandos de bash en español
     
     alias gitBash="cp /c/Users/sergi/.bash_profile /c/Users/sergi/Repositorios/Terminal\ de\ Comandos/.bash_profile"
-        # Copia el contenido de este archivo a otro situado en un repositorio de git para asegurar la información
-        gitBash #Ejecución del comando para que actualice el archivo cada vez que se entre en consola
+        # copia el contenido de este fichero a un repositorio para conservar la información en Github
+        gitBash # Ejecución del comando para que actualice el archivo cada vez que se entre en consola
 
     # Páginas en alias----------------------------------------------------------------------------------------------------------
 
@@ -47,6 +47,7 @@ echo "";
 
         alias platzi="start https://platzi.com/clases/"
             # Abre el navegador en la página de Platzi
+        
 
 # Functions-----------------------------------------------------------------------------------------------------------------
 
@@ -57,7 +58,8 @@ echo "";
         echo "  -escritorio:    Mueve la consola al escritorio"
         echo "  -repositorios:  Mueve la consola a la carpeta de los repositorios"
         echo "  -comandos:      Muestra un less de la lista de comandos de bash en español"
-    }   # Imprime en la consola una lista de los alias creados con una pequeña explicación
+        echo "  -gitBash:       Copia el contenido de este fichero a un repositorio para conservar la información en Github"
+    }                       # Imprime en la consola una lista de los alias creados con una pequeña explicación
 
     function paginas (){
         echo ""
@@ -66,13 +68,16 @@ echo "";
         echo "  -gmail"
         echo "  -twitter"
         echo "  -platzi"
-    }   #Imprime en la consola una lista de las páginas web anexadas a un alias
+    }                       #Imprime en la consola una lista de las páginas web anexadas a un alias
 
     function ccd () {   
         cd "$@" && ls
-    }   # Hace un cd y muestra un ls
+    }                       # Hace un cd y muestra un ls
 
     function cdd () {
         cd "$@" && ls
-    }   # Hace un cd y muestra un ls
+    }                       # Hace un cd y muestra un ls
 
+    function commitTerminal() {
+        cd /c/Users/sergi/Repositorios/Terminal\ de\ Comandos && git add . && git commit -am "commit automático" && git push origin master
+    }
