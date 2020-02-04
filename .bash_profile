@@ -27,9 +27,9 @@ echo "";
     alias comandos="less /c/Users/sergi/Repositorios/Terminal\ de\ Comandos/Bash\ Español.txt"
         # Muestra un less de la lista de comandos de bash en español
     
-    alias gitBash="cp /c/Users/sergi/.bash_profile /c/Users/sergi/Repositorios/Terminal\ de\ Comandos/.bash_profile"
+    alias bashProfileToGit="cp /c/Users/sergi/.bash_profile /c/Users/sergi/Repositorios/Terminal\ de\ Comandos/.bash_profile"
         # copia el contenido de este fichero a un repositorio para conservar la información en Github
-        gitBash # Ejecución del comando para que actualice el archivo cada vez que se entre en consola
+        bashProfileToGit # Ejecución del comando para que actualice el archivo cada vez que se entre en consola
 
     # Páginas en alias----------------------------------------------------------------------------------------------------------
 
@@ -51,17 +51,17 @@ echo "";
 
 # Functions-----------------------------------------------------------------------------------------------------------------
 
-    function remindMe (){ 
+    function remind (){ 
         echo ""
-        echo "  -ccd/cdd:           Mueve la consola a la carpeta indicada y ejecuta un ls"
-        echo "  -arbol:             Crea un árbol de subdirectorios y archivos"
-        echo "  -escritorio:        Mueve la consola al escritorio"
-        echo "  -repositorios:      Mueve la consola a la carpeta de los repositorios"
-        echo "  -comandos:          Muestra un less de la lista de comandos de bash en español"
-        echo "  -paginas:           Lista las paginas ligadas a un alias"
-        echo "  -gitBash:           Copia el contenido de este fichero a un repositorio para conservar la información en Github"
-        echo "  -commitTerminal:    Hace un commit automatizado del repositorio de Sintaxis-Consola de Github"
-        echo "  -commitPlatzi:      Hace un commit automatizado del repositorio de Platzi de Github"
+        echo "  -ccd/cdd:               Mueve la consola a la carpeta indicada y ejecuta un ls"
+        echo "  -arbol:                 Crea un árbol de subdirectorios y archivos"
+        echo "  -escritorio:            Mueve la consola al escritorio"
+        echo "  -repositorios:          Mueve la consola a la carpeta de los repositorios"
+        echo "  -comandos:              Muestra un less de la lista de comandos de bash en español"
+        echo "  -paginas:               Lista las paginas ligadas a un alias"
+        echo "  -bashProfileToGit:      Copia el contenido de este fichero a un repositorio para conservar la información en Github"
+        echo "  -commitTerminal:        Hace un commit automatizado del repositorio de Sintaxis-Consola de Github"
+        echo "  -commitPlatzi:          Hace un commit automatizado del repositorio de Platzi de Github"
 
     }                       # Imprime en la consola una lista de los alias creados con una pequeña explicación
 
