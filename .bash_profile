@@ -80,4 +80,4 @@ echo "";
 
     function commitTerminal() {
         cd /c/Users/sergi/Repositorios/Terminal\ de\ Comandos && git add . && git commit -am "commit automático" && git push origin master
-    }
+    }                       # Funcionara?
