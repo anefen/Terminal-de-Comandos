@@ -88,3 +88,15 @@ echo "";
     function commitPlatzi() {
         cd /c/Users/sergi/Repositorios/Platzi && git add . && git commit -am "commit automático" && git push origin master
     }                       # Hace un commit automatizado del repositorio de Platzi de Github
+
+    function reinicia() {
+        echo "                         Welcome to Git bash console";
+echo "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-,------,";
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|   /\_/\ ";
+echo "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-|__( o .o)";
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ''   ''";
+echo "";
+ls -d */ 2>/dev/null || ls; # Si el comando " ls -d */ " falla el " 2>/dev/null impide que se imprima el mensaje de error " 
+                            # La " || " indica que en caso de error se ejecuta lo siguiente.
+echo "";
+    }
