@@ -31,6 +31,9 @@ echo "";
         # copia el contenido de este fichero a un repositorio para conservar la información en Github
         bashProfileToGit # Ejecución del comando para que actualice el archivo cada vez que se entre en consola
 
+    alias dia="start dia.exe"
+        # Abre el programa dia
+
     # Páginas en alias------------------------------------------------------------------------------------------------------
 
         alias github="start https://github.com/serodriguez-code?tab=repositories"
@@ -61,6 +64,7 @@ echo "";
         echo "  -bashProfileToGit:      Copia el contenido de este fichero a un repositorio para conservar la información en Github"
         echo "  -commitTerminal:        Hace un commit automatizado del repositorio de Sintaxis-Consola de Github"
         echo "  -commitPlatzi:          Hace un commit automatizado del repositorio de Platzi de Github"
+        echo "  -dia                    Abre el programa dia"
         echo "  -r                      Reinicia la consola con mis procesos básicos"
 
     }                       # Imprime en la consola una lista de los alias creados con una pequeña explicación
