@@ -50,6 +50,12 @@ echo "";
 
         alias platzi="start https://platzi.com/clases/"
             # Abre el navegador en la página de Platzi
+
+        alias calendario="start ~/Calendario.lnk"
+            # Abre el calendario de Windows
+        
+        alias codeBash="code ~/.bash_profile"
+            # Abre el visual Studio Code con el archivo de texto .bash_profile
         
 # Functions-----------------------------------------------------------------------------------------------------------------
 
@@ -65,6 +71,8 @@ echo "";
         echo "  -commitTerminal:        Hace un commit automatizado del repositorio de Sintaxis-Consola de Github"
         echo "  -commitPlatzi:          Hace un commit automatizado del repositorio de Platzi de Github"
         echo "  -dia                    Abre el programa dia"
+        echo "  -calendario             Abre el calendario de Windows"
+        echo "  -codeBash               Abre el visual Studio Code con el archivo de texto .bash_profile"
         echo "  -r                      Reinicia la consola con mis procesos básicos"
 
     }                       # Imprime en la consola una lista de los alias creados con una pequeña explicación
