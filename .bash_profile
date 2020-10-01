@@ -33,6 +33,12 @@ echo "";
 
     alias dia="start dia.exe"
         # Abre el programa dia
+    
+    alias calendario="start ~/Calendario.lnk"
+        # Abre el calendario de Windows
+    
+    alias codeBash="code ~/.bash_profile"
+        # Abre el visual Studio Code con el archivo de texto .bash_profile
 
     # Páginas en alias------------------------------------------------------------------------------------------------------
 
@@ -42,6 +48,8 @@ echo "";
         alias evagd="start https://www3.gobiernodecanarias.org/medusa/evagd/laguna/my/"
             # Abre el navegador en la página de EvaGD
 
+        alias pincel="start https://www.gobiernodecanarias.org/educacion/9/pekweb/Ekade/Alumnado/InformacionAcademica"
+
         alias gmail="start https://mail.google.com/mail/u/0/#inbox"
             # Abre el navegador en la página de Gmail
 
@@ -50,12 +58,9 @@ echo "";
 
         alias platzi="start https://platzi.com/clases/"
             # Abre el navegador en la página de Platzi
-
-        alias calendario="start ~/Calendario.lnk"
-            # Abre el calendario de Windows
-        
-        alias codeBash="code ~/.bash_profile"
-            # Abre el visual Studio Code con el archivo de texto .bash_profile
+            
+        alias photoshop="start /c/ProgramData/Microsoft/Windows/Start\ Menu/Programs/Adobe Photoshop 2020.lnk"
+            # Abre photoshop
         
 # Functions-----------------------------------------------------------------------------------------------------------------
 
@@ -72,6 +77,7 @@ echo "";
         echo "  -commitPlatzi:          Hace un commit automatizado del repositorio de Platzi de Github"
         echo "  -dia                    Abre el programa dia"
         echo "  -calendario             Abre el calendario de Windows"
+        echo "  -photoshop              Abre photoshop"
         echo "  -codeBash               Abre el visual Studio Code con el archivo de texto .bash_profile"
         echo "  -r                      Reinicia la consola con mis procesos básicos"
 
@@ -81,6 +87,7 @@ echo "";
         echo ""
         echo "  -github"
         echo "  -evagd"
+        echo "  -pincel"
         echo "  -gmail"
         echo "  -twitter"
         echo "  -platzi"

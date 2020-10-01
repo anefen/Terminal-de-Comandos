@@ -104,6 +104,7 @@ mv primero segundo
             |   Despliega una interfaz dentro de la consola que imprime el archivo especificado
 
 -sudo -i
+
 	        |	 Entra en modo root
 
 sudo apt-get update
